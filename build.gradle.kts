@@ -1,15 +1,16 @@
 plugins {
     id("net.labymod.labygradle")
     id("net.labymod.labygradle.addon")
+    kotlin("jvm") version "2.2.0"
 }
 
 val versions = providers.gradleProperty("net.labymod.minecraft-versions").get().split(";")
 
-group = "org.example"
-version = providers.environmentVariable("VERSION").getOrElse("1.0.0")
+group = "com.github.wildtooth"
+version = providers.environmentVariable("VERSION").getOrElse("0.1.0")
 
 labyMod {
-    defaultPackageName = "org.example" //change this to your main package name (used by all modules)
+    defaultPackageName = "com.github.wildtooth.knowledge" //change this to your main package name (used by all modules)
 
     minecraft {
         registerVersion(versions.toTypedArray()) {
@@ -23,10 +24,10 @@ labyMod {
     }
 
     addonInfo {
-        namespace = "example"
-        displayName = "ExampleAddon"
-        author = "Example Author"
-        description = "Example Description"
+        namespace = "knowledge"
+        displayName = "Server Knowledge"
+        author = "Champen_V1ldtand"
+        description = "Helps players navigate servers with known knowledge."
         minecraftVersion = "*"
         version = rootProject.version.toString()
     }
@@ -35,6 +36,7 @@ labyMod {
 subprojects {
     plugins.apply("net.labymod.labygradle")
     plugins.apply("net.labymod.labygradle.addon")
+    plugins.apply("org.jetbrains.kotlin.jvm")
 
     group = rootProject.group
     version = rootProject.version
