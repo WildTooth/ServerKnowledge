@@ -4,7 +4,6 @@ import kotlin.math.floor
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.sqrt
-import kotlin.unaryMinus
 
 class BlockVector2(val x: Int, val z: Int) {
 
