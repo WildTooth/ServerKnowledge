@@ -4,6 +4,7 @@ import kotlin.math.floor
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.sqrt
+import kotlin.unaryMinus
 
 class BlockVector2(val x: Int, val z: Int) {
 
@@ -137,6 +138,34 @@ class BlockVector2(val x: Int, val z: Int) {
 
   override fun toString(): String {
     return "BlockVector2(x=$x, z=$z)"
+  }
+
+  operator fun plus(other: BlockVector2): BlockVector2 {
+    return add(other.x, other.z)
+  }
+
+  operator fun minus(other: BlockVector2): BlockVector2 {
+    return subtract(other.x, other.z)
+  }
+
+  operator fun times(other: BlockVector2): BlockVector2 {
+    return multiply(other.x, other.z)
+  }
+
+  operator fun times(n: Int): BlockVector2 {
+    return multiply(n)
+  }
+
+  operator fun div(other: BlockVector2): BlockVector2 {
+    return divide(other.x, other.z)
+  }
+
+  operator fun div(n: Int): BlockVector2 {
+    return divide(n)
+  }
+
+  operator fun unaryMinus(): BlockVector2 {
+    return at(-x, -z)
   }
 
   companion object {

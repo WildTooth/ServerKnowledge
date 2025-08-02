@@ -170,6 +170,34 @@ class BlockVector3(val x: Int, val y: Int, val z: Int) {
     return "BlockVector3(x=$x, y=$y, z=$z)"
   }
 
+  operator fun plus(other: BlockVector3): BlockVector3 {
+    return add(other.x, other.y, other.z)
+  }
+
+  operator fun minus(other: BlockVector3): BlockVector3 {
+    return subtract(other.x, other.y, other.z)
+  }
+
+  operator fun times(other: BlockVector3): BlockVector3 {
+    return multiply(other.x, other.y, other.z)
+  }
+
+  operator fun times(n: Int): BlockVector3 {
+    return multiply(n)
+  }
+
+  operator fun div(other: BlockVector3): BlockVector3 {
+    return divide(other.x, other.y, other.z)
+  }
+
+  operator fun div(n: Int): BlockVector3 {
+    return divide(n)
+  }
+
+  operator fun unaryMinus(): BlockVector3 {
+    return at(-x, -y, -z)
+  }
+
   companion object {
     val ZERO: BlockVector3 = BlockVector3(0, 0, 0)
     val ONE: BlockVector3 = BlockVector3(1, 1, 1)
