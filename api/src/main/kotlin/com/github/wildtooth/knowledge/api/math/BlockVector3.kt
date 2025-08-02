@@ -1,4 +1,4 @@
-package com.github.wildtooth.knowledge.math
+package com.github.wildtooth.knowledge.api.math
 
 import kotlin.math.*
 

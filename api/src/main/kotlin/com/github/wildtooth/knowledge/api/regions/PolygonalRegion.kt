@@ -1,7 +1,7 @@
-package com.github.wildtooth.knowledge.regions
+package com.github.wildtooth.knowledge.api.regions
 
-import com.github.wildtooth.knowledge.math.BlockVector2
-import com.github.wildtooth.knowledge.math.BlockVector3
+import com.github.wildtooth.knowledge.api.math.BlockVector2
+import com.github.wildtooth.knowledge.api.math.BlockVector3
 import java.util.List
 
 class PolygonalRegion : Region {

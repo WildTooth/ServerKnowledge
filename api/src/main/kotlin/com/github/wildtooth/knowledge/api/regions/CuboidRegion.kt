@@ -1,6 +1,6 @@
-package com.github.wildtooth.knowledge.regions
+package com.github.wildtooth.knowledge.api.regions
 
-import com.github.wildtooth.knowledge.math.BlockVector3
+import com.github.wildtooth.knowledge.api.math.BlockVector3
 
 class CuboidRegion : Region {
 
